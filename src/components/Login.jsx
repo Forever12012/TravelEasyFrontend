@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -8,6 +8,8 @@ export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -18,7 +20,10 @@ export const Login = () => {
         email,
         password,
       });
-      toast.success("Login successful!");
+      toast.success("Logged in successfully!", {
+        autoClose: 2000,
+        onClose: () => navigate("/"),
+      });
     } catch (error) {
       // Show detailed error message if available
       toast.error(

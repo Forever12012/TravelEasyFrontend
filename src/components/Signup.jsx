@@ -13,8 +13,44 @@ export const Signup = () => {
 
   const navigate = useNavigate();
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePassword = (password) => {
+    // Password should have at least 6 characters, 1 uppercase, 1 lowercase, 1 number, and 1 special character
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+    return passwordRegex.test(password);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (userName.trim() === "") {
+      toast.error("Name cannot be empty.", {
+        autoClose: 3000,
+      });
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      toast.error("Please enter a valid email address.", {
+        autoClose: 3000,
+      });
+      return;
+    }
+
+    if (!validatePassword(password)) {
+      toast.error(
+        "Password must be at least 6 characters long, contain an uppercase letter, a lowercase letter, a number, and a special character.",
+        {
+          autoClose: 3000,
+        }
+      );
+      return;
+    }
 
     if (!isTermsAccepted) {
       toast.error("You must accept the Terms and Conditions.", {
