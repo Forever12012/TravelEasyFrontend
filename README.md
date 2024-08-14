@@ -16,12 +16,12 @@ Prerequisites
  - MySQL (v8.x or higher)
 
 Clone the Frontend Frontend Repo with the following command - 
--> git clone https://github.com/Forever12012/TravelEasyFrontend.git
--> Install all the node dependencies using npn install.
--> After installing dependencies, give command npm start to run the frontend.
+- git clone https://github.com/Forever12012/TravelEasyFrontend.git
+- Install all the node dependencies using npn install.
+-  After installing dependencies, give command npm start to run the frontend.
 
 API Integration
 ----------------
--> I have made an API for subscribing to the newsletter for the website. When the user clicks on the Subscribe button, an request hits the backend endpoint and an Email is sent to the mentioned Email ID.
--> I have also made an API for Contact Us page, where the user can send a mail to the company if they want to make an enquiry. When the user clicks on the Send Message button, an request hits the backend endpoint and an Email is sent to the mentioned Email ID.
--> I have also made API's for SignUp and Log In. User can Sign Up to the website and then they can Login using the registered account.
+- I have made an API for subscribing to the newsletter for the website. When the user clicks on the Subscribe button, an request hits the backend endpoint and an Email is sent to the mentioned Email ID.
+- I have also made an API for Contact Us page, where the user can send a mail to the company if they want to make an enquiry. When the user clicks on the Send Message button, an request hits the backend endpoint and an Email is sent to the mentioned Email ID.
+- I have also made API's for SignUp and Log In. User can Sign Up to the website and then they can Login using the registered account.
