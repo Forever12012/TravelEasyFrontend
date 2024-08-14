@@ -17,7 +17,7 @@ Prerequisites
 
 Clone the Frontend Frontend Repo with the following command - 
 - git clone https://github.com/Forever12012/TravelEasyFrontend.git
-- Install all the node dependencies using npn install.
+- Install all the node dependencies using npm install.
 -  After installing dependencies, give command npm start to run the frontend.
 
 API Integration
